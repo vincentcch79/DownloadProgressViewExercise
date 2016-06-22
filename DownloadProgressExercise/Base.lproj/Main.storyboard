@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DownloadProgressExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,84 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o2M-51-8Yy">
+                                <rect key="frame" x="200" y="20" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="H4S-yb-ph2"/>
+                                    <constraint firstAttribute="width" constant="200" id="Xjm-MC-PIb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42q-I7-DBe">
+                                <rect key="frame" x="200" y="228" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0PG-wz-ik8"/>
+                                    <constraint firstAttribute="height" constant="30" id="egF-Z7-sgk"/>
+                                </constraints>
+                                <state key="normal" title="Download First Pic"/>
+                                <connections>
+                                    <action selector="firstDownloadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZGA-ze-Yic"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IBn-Pt-z9y">
+                                <rect key="frame" x="200" y="266" width="200" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBJ-YT-beQ">
+                                <rect key="frame" x="200" y="276" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="JZ0-9w-gxg"/>
+                                    <constraint firstAttribute="width" constant="200" id="o9Z-2a-TDa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qsp-Mb-Se5">
+                                <rect key="frame" x="200" y="305" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Gk1-RL-cpO"/>
+                                    <constraint firstAttribute="width" constant="200" id="TMB-Dl-Wze"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJM-Up-MgH">
+                                <rect key="frame" x="200" y="513" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="cDe-2q-e0L"/>
+                                    <constraint firstAttribute="height" constant="30" id="mtv-Ve-NJm"/>
+                                </constraints>
+                                <state key="normal" title="Download Second Pic"/>
+                                <connections>
+                                    <action selector="secondDownloadButton:" destination="BYZ-38-t0r" eventType="touchDown" id="20c-uW-Zew"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GBJ-YT-beQ" firstAttribute="centerX" secondItem="42q-I7-DBe" secondAttribute="centerX" id="0gs-F4-Vo2"/>
+                            <constraint firstItem="GBJ-YT-beQ" firstAttribute="top" secondItem="42q-I7-DBe" secondAttribute="bottom" constant="18" id="9je-gD-lZj"/>
+                            <constraint firstItem="IBn-Pt-z9y" firstAttribute="top" secondItem="42q-I7-DBe" secondAttribute="bottom" constant="8" id="CjB-vB-hYg"/>
+                            <constraint firstItem="IBn-Pt-z9y" firstAttribute="centerX" secondItem="42q-I7-DBe" secondAttribute="centerX" id="OVT-wt-L40"/>
+                            <constraint firstItem="o2M-51-8Yy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="QRW-Kk-M0Z"/>
+                            <constraint firstItem="QJM-Up-MgH" firstAttribute="centerX" secondItem="Qsp-Mb-Se5" secondAttribute="centerX" id="QUC-8f-t9d"/>
+                            <constraint firstItem="Qsp-Mb-Se5" firstAttribute="top" secondItem="42q-I7-DBe" secondAttribute="bottom" constant="47" id="UMF-zI-mvg"/>
+                            <constraint firstItem="42q-I7-DBe" firstAttribute="centerX" secondItem="o2M-51-8Yy" secondAttribute="centerX" id="Y3Q-uJ-LLO"/>
+                            <constraint firstItem="QJM-Up-MgH" firstAttribute="top" secondItem="Qsp-Mb-Se5" secondAttribute="bottom" constant="8" id="eqo-SC-ddZ"/>
+                            <constraint firstItem="42q-I7-DBe" firstAttribute="top" secondItem="o2M-51-8Yy" secondAttribute="bottom" constant="8" id="g8C-Sg-MoD"/>
+                            <constraint firstItem="o2M-51-8Yy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hvc-x1-ZC8"/>
+                            <constraint firstItem="IBn-Pt-z9y" firstAttribute="leading" secondItem="42q-I7-DBe" secondAttribute="leading" id="rpe-uw-DxH"/>
+                            <constraint firstItem="Qsp-Mb-Se5" firstAttribute="centerX" secondItem="42q-I7-DBe" secondAttribute="centerX" id="xCa-R7-Ie3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstImageView" destination="o2M-51-8Yy" id="aW0-BH-kbv"/>
+                        <outlet property="firstPicLabel" destination="GBJ-YT-beQ" id="5ao-MT-Flh"/>
+                        <outlet property="firstProgressView" destination="IBn-Pt-z9y" id="Nef-zw-Tvf"/>
+                        <outlet property="secondImageView" destination="Qsp-Mb-Se5" id="7AB-WN-lCQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="212" y="305"/>
         </scene>
     </scenes>
 </document>
