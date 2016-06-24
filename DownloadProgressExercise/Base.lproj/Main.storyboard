@@ -35,10 +35,10 @@
                                     <action selector="firstDownloadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZGA-ze-Yic"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IBn-Pt-z9y">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IBn-Pt-z9y">
                                 <rect key="frame" x="200" y="266" width="200" height="2"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBJ-YT-beQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 MB / 0.0 MB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBJ-YT-beQ">
                                 <rect key="frame" x="200" y="276" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="JZ0-9w-gxg"/>
